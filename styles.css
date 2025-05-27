@@ -1,0 +1,254 @@
+/* Mobile-first */
+
+@font-face{
+    font-family: 'Montserrat';
+    src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+    font-weight: 500, 700;
+    
+}
+
+@font-face{
+    font-family:'Fraunces';
+    src: url(fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-weight: 700;
+}
+
+/* Reset settings */
+
+html{
+    padding: 0;
+    margin: 0;
+}
+
+/* Variables area */
+
+:root{
+    /* Colors */
+    --main-color:hsl(30, 38%, 92%);
+    --white:hsl(0, 0%, 100%);
+    --gray:hsl(228, 12%, 48%);
+    --black:hsl(212, 21%, 14%);
+    --dark-green:hsl(158, 42%, 18%);
+    --light-green:hsl(158, 36%, 37%)
+}
+
+/* Global styling area */
+
+html{
+    font-size: 1rem;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: var(--gray);
+    text-overflow: balance;
+}
+
+h1{
+    font-family:'Fraunces';
+    font-size: 2.3rem;
+    color: var(--black);
+}
+
+p{
+    line-height: 1.7rem;
+}
+
+img{
+    object-fit: cover;
+}
+
+/* Local styling area */
+
+body{
+    box-sizing: border-box;
+    background-color: var(--main-color)
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    margin: 30% auto;
+    width: 95%;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_section_picture img{
+    border-radius: 0.5rem 0.5rem 0 0;
+    min-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+.about_product{
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+}
+
+.about_product > *{
+    margin: 0;
+    padding: 0;
+}
+
+span{
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+.price{
+    flex-direction: row;
+    column-gap: 1rem;
+    align-items: center;
+    margin-inline: 0; 
+}
+
+.price h1{
+    color: var(--light-green);
+}
+
+button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+    width:100%;
+    height:3.5rem;
+    margin-inline: auto;
+    font-style: bold;
+    font-weight: 700;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--light-green);
+    color: var(--white);
+    letter-spacing: 0.1rem;
+}
+
+.attribution{
+    display: none;
+}
+
+/* Adaptive area */
+
+@media (max-width:160px){
+    html{
+        word-break: break-all;
+    }
+}
+
+@media (max-width:260px){
+    .about_product h1{
+        font-size: 1.5rem;
+    }
+    .price s{
+        display: none;
+    }
+    button img{
+        display: none;
+    }
+}
+
+@media (max-width:549px) and (min-width:400px){
+    main{
+        width: 75%;
+        margin-top: 20%;
+    }
+}
+
+@media (min-width:770px){
+    main{
+        margin: 20% auto;
+        width: 90%;
+        background-color: var(--white);
+        border-radius: 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+    .main_section_picture img{
+        border-radius: 0.5rem 0.5rem 0 0;
+        min-width: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .about_product{
+        padding: 3rem;
+        box-sizing: border-box;
+        row-gap: 3rem;
+    }
+    .about_product h1{
+        width:80%;
+        line-height: 2.3rem;
+    }
+    .about_product p{
+        width:90%;
+    }
+    .about_product>*{
+        margin: 0;
+        padding: 0;
+    }
+    .price{
+        height: 2rem;
+        width: 70%;
+    }
+    button{
+        padding-inline: auto;
+        width:100%;
+        height:4rem;
+    }
+}
+
+@media (max-width:769px) and (min-width:550px){
+    main{
+        width: 65%;
+        margin-block: 15%;
+    }
+    .main_section_picture img{
+        min-height: 100%;
+    }
+}
+
+@media (max-width:1000px) and (min-width:770px) {
+    main{
+        margin-block: 15%;
+    }
+}
+
+@media (max-width:1200px) and (min-width:1001px) {
+    main{
+        width: 70%;
+        margin-block: 10%;
+    }
+}
+
+@media (min-width:1201px){
+    main{
+        width: 48%;
+        margin-block: 10%;
+    }
+    .about_product{
+        row-gap: 3rem;
+    }
+    .main_section_picture img{
+        border-radius: 0.5rem  0 0 0.5rem;
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .price{
+        column-gap: 2rem;
+    }
+}
