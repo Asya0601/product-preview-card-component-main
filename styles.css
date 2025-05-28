@@ -103,6 +103,9 @@ main{
     padding-block: auto;
     height:5vh;
 }
+.price h1{
+    color:var(--light-green)
+}
 .price s{
     padding-inline: 0.7rem;
 }
